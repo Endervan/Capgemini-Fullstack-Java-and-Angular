@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/java_modular.iml" filepath="$PROJECT_DIR$/java_modular.iml" />
+      <module fileurl="file://$PROJECT_DIR$/masmidia.digital.one.core/masmidia.digital.one.core.iml" filepath="$PROJECT_DIR$/masmidia.digital.one.core/masmidia.digital.one.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/masmidia.digital.one.core.utils/masmidia.digital.one.core.utils.iml" filepath="$PROJECT_DIR$/masmidia.digital.one.core.utils/masmidia.digital.one.core.utils.iml" />
+    </modules>
+  </component>
+</project>
