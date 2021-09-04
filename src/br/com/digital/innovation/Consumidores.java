@@ -1,16 +1,20 @@
 package br.com.digital.innovation;
 
-import java.util.function.Consumer;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import static java.lang.Integer.parseInt;
 
 public class Consumidores {
 
-    public static void main(String[] args) {
+    public static <let> void main(String[] args) throws IOException {
 //        Consumer<String> imprimirUmaFrase = System.out::println;
-        Consumer<String> imprimirUmaFrase = frase -> System.out.println (frase);
-
-        imprimirUmaFrase.accept("hello mundo !!");
+//        Consumer<String> imprimirUmaFrase = System.out::println;
+//
+//        imprimirUmaFrase.accept("hello mundo !!");
 
     }
 
-
 }
+
