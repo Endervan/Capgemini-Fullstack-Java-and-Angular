@@ -36,12 +36,12 @@ public class ExemploOrdernacaoList {
         System.out.println(meusGato);
 
 
-        System.out.println("====ordem cor ====");
+        System.out.println("==== ordem cor ====");
         // Collections.sort(meusGato, new ComparatorCor());
         meusGato.sort(new ComparatorCor());
         System.out.println(meusGato);
 
-        System.out.println("====ordem Nome/Cor/Idade ====");
+        System.out.println("==== ordem Nome/Cor/Idade ====");
         // Collections.sort(meusGato, new ComparatorNomeIdadeCor());
         meusGato.sort(new ComparatorNomeIdadeCor());
         System.out.println(meusGato);
@@ -49,9 +49,9 @@ public class ExemploOrdernacaoList {
 }
 
 class Gato implements Comparable<Gato> {
-    private String nome;
-    private Integer idade;
-    private String cor;
+    private final String nome;
+    private final Integer idade;
+    private final String cor;
 
     public Gato(String nome, Integer idade, String cor) {
         this.nome = nome;

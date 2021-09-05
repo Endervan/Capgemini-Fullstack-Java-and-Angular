@@ -81,7 +81,6 @@ public class ExemploList {
 //        //  Iterator<Double> iterator1 = notas.iterator();
 //        // ===  while (iterator1.hasNext()) {
 //        //            Double next = iterator1.next();
-//        //            if (next < 7) iterator1.remove();
 //        //        }
 //
 //        System.out.println("Apague todas a lista");
