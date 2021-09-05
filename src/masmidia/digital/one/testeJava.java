@@ -3,16 +3,17 @@ package masmidia.digital.one;
 public class testeJava {
 
     public static void main(String[] args) {
-InferenciaExemplo()
+//InferenciaExemplo();
+//    }
+//
+//
+//    public class InferenciaExemplo {
+//        private var expoente = 2;
+//        public static void main(String[] args) {
+//            System.out.println(10*expoente);
+//        }
+//    }
+//
+
     }
-
-
-    public class InferenciaExemplo {
-        private var expoente = 2;
-        public static void main(String[] args) {
-            System.out.println(10*expoente);
-        }
-    }
-
-
 }
