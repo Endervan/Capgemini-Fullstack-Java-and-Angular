@@ -2,6 +2,7 @@ package trabalhando.com.collections;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class ExemploOrdernacaoList {
@@ -29,6 +30,21 @@ public class ExemploOrdernacaoList {
 
 
         System.out.println("Ordem Natural->Idade");
+//        Collections.sort(meusGato, new ComparatorIdade());
+        /////////// ou //
+        meusGato.sort(new ComparatorIdade());
+        System.out.println(meusGato);
+
+
+        System.out.println("====ordem cor ====");
+        // Collections.sort(meusGato, new ComparatorCor());
+        meusGato.sort(new ComparatorCor());
+        System.out.println(meusGato);
+
+        System.out.println("====ordem Nome/Cor/Idade ====");
+        // Collections.sort(meusGato, new ComparatorNomeIdadeCor());
+        meusGato.sort(new ComparatorNomeIdadeCor());
+        System.out.println(meusGato);
     }
 }
 
@@ -69,3 +85,36 @@ class Gato implements Comparable<Gato> {
         return this.getNome().compareToIgnoreCase(gato.getNome());
     }
 }
+
+class ComparatorIdade implements Comparator<Gato> {
+
+    @Override
+    public int compare(Gato g1, Gato g2) {
+        return Integer.compare(g1.getIdade(), g2.getIdade());
+    }
+
+}
+
+class ComparatorCor implements Comparator<Gato> {
+
+    @Override
+    public int compare(Gato g1, Gato g2) {
+        return g1.getCor().compareToIgnoreCase(g2.getCor());
+    }
+
+}
+
+class ComparatorNomeIdadeCor implements Comparator<Gato> {
+
+    @Override
+    public int compare(Gato g1, Gato g2) {
+        int nome = g1.getNome().compareToIgnoreCase(g2.getNome());
+        if (nome != 0) return nome;
+
+        int cor = g1.getCor().compareToIgnoreCase(g2.getCor());
+        if (cor != 0) return cor;
+        return Integer.compare(g1.getIdade(), g2.getIdade());
+    }
+}
+
+
