@@ -92,7 +92,7 @@ public class ExemploList {
 //       System.out.println("CONFIRAR SE A LISTA ESTA VAZIA " +notas.isEmpty());
 
 
-        List<Double> notas1 = new ArrayList<>(); // generico (jdk 5)
+        LinkedList<Double> notas1 = new LinkedList<>(); // generico (jdk 5)
         //  double == pode ser 7.0 ou 7d
         notas1.add(8.0);
         notas1.add(9.5);
@@ -104,7 +104,7 @@ public class ExemploList {
         System.out.println(notas1);
 
         System.out.println("Mostre a 1 nota sem remove-la " + notas1.get(0));
-        System.out.println("Mostre a 1 nota sem remove-la " + notas1.remove(0));
+        System.out.println("Mostre a 1 nota e remove-la " + notas1.remove(0));
         System.out.println(notas1);
 
     }
