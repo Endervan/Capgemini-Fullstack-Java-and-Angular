@@ -38,7 +38,6 @@ public class ExemploOrdenacaoSetConjunto {
         System.out.println("---Exibir Natural (Nome/Gênero/TempoEpisodio))----");
         Set<Serie> minhasSeries3 = new TreeSet<>(new ComparatorNomeGeneroTempoEpisodio());
         minhasSeries3.addAll(minhasSeries);
-
         for (Serie serie : minhasSeries3)
             System.out.println(serie.getNome() + "-" + serie.getGenero() + "-" + serie.getTempoEpisodio());
 
