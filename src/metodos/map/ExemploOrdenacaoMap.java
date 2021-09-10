@@ -1,6 +1,5 @@
 package metodos.map;
 
-import java.security.SecureRandom;
 import java.util.*;
 
 public class ExemploOrdenacaoMap {
