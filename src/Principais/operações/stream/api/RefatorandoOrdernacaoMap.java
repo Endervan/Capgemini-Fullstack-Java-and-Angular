@@ -14,9 +14,6 @@ public class RefatorandoOrdernacaoMap {
             put(4, new Contato("cami", 1111));
             put(5, new Contato("jon", 2222));
         }};
-
-        System.out.println(agenda);
-
         for (Map.Entry<Integer, Contato> entry : agenda.entrySet()) {
             System.out.println(entry.getKey() + " - " + entry.getValue().getNome());
         }
@@ -51,10 +48,10 @@ public class RefatorandoOrdernacaoMap {
 
         System.out.println("----- Ordem por Contato usando Lambada-------");
         Set<Map.Entry<Integer, Contato>> set1 = new TreeSet<>(Comparator.comparing(
-                cont -> cont.getValue().getNome()));
+                cont1 -> cont1.getValue().getNome()));
         set1.addAll(agenda.entrySet());
-        for (Map.Entry<Integer, Contato> entry : set1) {
-            System.out.println(entry.getKey() + " - " + entry.getValue().getNome() + " - " + entry.getValue().getNumero());
+        for (Map.Entry<Integer, Contato> entry1 : set1) {
+            System.out.println(entry1.getKey() + " - " + entry1.getValue().getNome() + " - " + entry1.getValue().getNumero());
         }
     }
 }
