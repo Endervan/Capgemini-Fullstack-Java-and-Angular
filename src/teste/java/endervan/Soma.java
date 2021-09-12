@@ -1,4 +1,4 @@
-package teste.java.edvan;
+package teste.java.endervan;
 
 import java.util.Scanner;
 

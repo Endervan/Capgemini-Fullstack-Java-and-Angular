@@ -1,4 +1,4 @@
-package teste.java.edvan;
+package teste.java.endervan;
 
 import java.io.IOException;
 import java.util.Scanner;
