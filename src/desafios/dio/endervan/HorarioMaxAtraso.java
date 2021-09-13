@@ -1,4 +1,4 @@
-package teste.java.endervan;
+package desafios.dio.endervan;
 
 import java.io.IOException;
 import java.util.Scanner;
