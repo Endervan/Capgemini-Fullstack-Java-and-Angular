@@ -15,6 +15,23 @@
   💼 Ferramentas: <strong>Intellij e PhpStorm .</strong>
 </p>
 
+
+
+## 💪 Como contribuir para o projeto
+
+1. Faça um **fork** do projeto.
+2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
+3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "feature: My new feature"`
+4. Envie as suas alterações: `git push origin my-feature`
+> Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](./CONTRIBUTING.md)
+
+## 🦸 Autor
+
+<a href="https://www.linkedin.com/in/edvan-alves-da-cruz-ximenes-aa9708a3/">
+ <img style="border-radius: 50%;" src="https://i.postimg.cc/jqZxJq0X/20210726-164720-1.jpg" width="100px;" alt=""/>
+ <br />
+ <sub><b>Endervan Alves</b></sub></a> <a href="https://www.linkedin.com/in/edvan-alves-da-cruz-ximenes-aa9708a3/" title="Rocketseat">🚀</a>
+ <br />
 <p align="left">
   💌 Contatos: ⤵️
 </p>
@@ -40,5 +57,11 @@
   <img src="https://img.shields.io/badge/-Instagram-DF0174?style=flat-square&labelColor=DF0174&logo=instagram&logoColor=white&link=https://www.instagram.com/ender.ac/"/>
   </a>
 </p>  
+
+## 📝 Licença
+
+Este projeto esta sobe a licença [MIT](./LICENSE).
+
+Feito com ❤️ por Thiago Marinho 👋🏽 [Entre em contato!](https://www.linkedin.com/in/edvan-alves-da-cruz-ximenes-aa9708a3/)
 
 

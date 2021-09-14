@@ -1,4 +1,4 @@
-package desafios.dio.endervan;
+package desafios.dio.resolvidos.endervan;
 
 import java.util.Scanner;
 
