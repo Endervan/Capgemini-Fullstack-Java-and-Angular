@@ -62,6 +62,6 @@
 
 Este projeto esta sobe a licença [MIT](./LICENSE).
 
-Feito com ❤️ por Thiago Marinho 👋🏽 [Entre em contato!](https://www.linkedin.com/in/edvan-alves-da-cruz-ximenes-aa9708a3/)
+Feito com ❤️ por Edvan Alves 👋🏽 [Entre em contato!](https://www.linkedin.com/in/edvan-alves-da-cruz-ximenes-aa9708a3/)
 
 
