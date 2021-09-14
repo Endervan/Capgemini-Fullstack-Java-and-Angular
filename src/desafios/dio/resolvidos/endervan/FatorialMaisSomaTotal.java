@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class FatorialMaisSomaTotal {
 
     public static void main(String[] args) {
+        // forma crescente
 //        Scanner sc = new Scanner (System.in);
 //        int numero ;
 //        numero = sc.nextInt();
@@ -20,11 +21,12 @@ public class FatorialMaisSomaTotal {
 //        return fact;
 //    }
 
+        // forma proposta
         Scanner sc = new Scanner(System.in);
         int numero = 1;
         numero = sc.nextInt();
 
-//        System.out.println("o fatorial " + numero + " e " + factorial(numero));
+        // System.out.println("o fatorial " + numero + " e " + factorial(numero));
         System.out.println(factorial(numero));
     }
 
