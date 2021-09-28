@@ -24,9 +24,17 @@ const salgados = Array('kibe', 'cochinha', 'pastel');
 // console.log('Removendo itens Array ', removendoItens);
 
 
-const itens = Array(1,2,3,4);
-// splice adicionando array
-const adicionandoItens = itens.splice(0, 0,'first');
-console.log('Adicionando itens Array ', adicionandoItens);
+// const itens = Array(1,2,3,4);
+// // splice adicionando array
+// const adicionandoItens = itens.splice(0, 0,'first');
+// console.log('Adicionando itens Array ', adicionandoItens);
 
 
+// const frutas1 = ["amora", ["laranja", ["melancia"], "acerola"]];
+//
+// console.log(frutas1.flat(2));
+
+const frutas3 = ["melancia", "laranja", "acerola"];
+
+// console.log(frutas3.shift())
+console.log(frutas3.pop())
