@@ -42,11 +42,40 @@ Os códigos estão rodando normalmente na plataforma da DIO.
 <!-- Java -->
 <details>
   <summary><span>Java</span></summary>
-  <div>
-    <h4>Introdução a Programação com Java(Básico)</h4>
-    <a href="https://github.com/Endervan/Capgemini-Fullstack-Java-and-Angular/blob/master/src/desafios/dio/resolvidos/endervan/MultiplicacaoSimples.java">Multiplicação Simples</a><br/>
-    <a href="https://github.com/Endervan/Capgemini-Fullstack-Java-and-Angular/blob/master/src/desafios/dio/resolvidos/endervan/Soma.java">Soma Simples</a><br/>
-    <a href="https://github.com/Endervan/Capgemini-Fullstack-Java-and-Angular/blob/master/src/desafios/dio/resolvidos/endervan/MediaGeral.java">Média </a><br/>
+  <div align="left">
+   <table border="1">
+              <tbody><tr>
+                  <th colspan="4">Introdução a Programação com Java(Básico)</th>
+              </tr>
+              <tr>
+                  <th colspan="4"></th>
+              </tr>
+              <tr>
+                  <th>Etapa</th>
+                  <th>Desafio</th>
+                  <th>Solução</th>
+                  <th>Status</th>
+              </tr>
+              <tr>
+                  <td align="center">1</td>
+                  <td>Multiplicação Simples</td>
+                  <td><a href="https://github.com/Endervan/Capgemini-Fullstack-Java-and-Angular/blob/master/src/desafios/dio/resolvidos/endervan/MultiplicacaoSimples.java">Código</a></td>
+                  <td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png">✔️</g-emoji></td>
+              </tr>
+              <tr>
+                  <td align="center">2</td>
+                  <td>Soma Simples</td>
+                  <td><a href="https://github.com/Endervan/Capgemini-Fullstack-Java-and-Angular/blob/master/src/desafios/dio/resolvidos/endervan/Soma.java">Código</a></td>
+                  <td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png">✔️</g-emoji></td>
+              </tr>
+              <tr>
+                  <td align="center">3</td>
+                  <td>Média?</td>
+                  <td><a href="https://github.com/Endervan/Capgemini-Fullstack-Java-and-Angular/blob/master/src/desafios/dio/resolvidos/endervan/MediaGeral.java">Código</a></td>
+                  <td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png">✔️</g-emoji></td>
+          </tr>
+          </tbody>
+          </table>   
   </div>
   <div>
     <h4>Desafios numéricos em Java(Intermediario)</h4>
@@ -61,7 +90,6 @@ Os códigos estão rodando normalmente na plataforma da DIO.
   <div>
     <h4>Em breve...</h4>
     <!--<a href="https://github.com/Endervan/Capgemini-Fullstack-Java-and-Angular/blob/master/src/desafios/dio/resolvidos/endervan/MultiplicacaoSimples.java">Multiplicação Simples</a><br/> -->
-   
   </div>
 </details>
 
