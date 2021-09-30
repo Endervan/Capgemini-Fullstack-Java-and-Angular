@@ -77,10 +77,39 @@ Os códigos estão rodando normalmente na plataforma da DIO.
           </tbody>
           </table>   
   </div>
-  <div>
-    <h4>Desafios numéricos em Java(Intermediario)</h4>
-    <a href="https://github.com/Endervan/Capgemini-Fullstack-Java-and-Angular/blob/master/src/desafios/dio/resolvidos/endervan/Divisores.java">Divisores I</a><br/>
-    <a href="https://github.com/Endervan/Capgemini-Fullstack-Java-and-Angular/blob/master/src/desafios/dio/resolvidos/endervan/FatorialMaisSomaTotal.java">Fatorial Simples</a><br/>
+  <div align="left">
+    <h4></h4>
+    <a href="">Divisores I</a><br/>
+    <a href=""> Simples</a><br/>
+    <table border="1">
+                <tbody><tr>
+                    <th colspan="4">Desafios numéricos em Java(Intermediario)</th>
+                </tr>
+                <tr>
+                    <th colspan="4"></th>
+                </tr>
+                <tr>
+                    <th>Etapa</th>
+                    <th>Desafio</th>
+                    <th>Solução</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td align="center">1</td>
+                    <td>Divisores I</td>
+                    <td><a href="https://github.com/Endervan/Capgemini-Fullstack-Java-and-Angular/blob/master/src/desafios/dio/resolvidos/endervan/Divisores.java">Código</a></td>
+                    <td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png">✔️</g-emoji></td>
+                </tr>
+                <tr>
+                    <td align="center">2</td>
+                    <td>Fatorial Simples</td>
+                    <td><a href="https://github.com/Endervan/Capgemini-Fullstack-Java-and-Angular/blob/master/src/desafios/dio/resolvidos/endervan/FatorialMaisSomaTotal.java">Código</a></td>
+                    <td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png">✔️</g-emoji></td>
+                </tr>
+                <tr>
+            </tr>
+            </tbody>
+            </table>   
   </div>
 </details>
 
