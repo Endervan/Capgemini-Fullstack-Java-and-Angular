@@ -78,9 +78,6 @@ Os códigos estão rodando normalmente na plataforma da DIO.
           </table>   
   </div>
   <div align="left">
-    <h4></h4>
-    <a href="">Divisores I</a><br/>
-    <a href=""> Simples</a><br/>
     <table border="1">
                 <tbody><tr>
                     <th colspan="4">Desafios numéricos em Java(Intermediario)</th>
