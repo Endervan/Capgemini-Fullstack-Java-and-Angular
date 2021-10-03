@@ -19,7 +19,6 @@ public class Main {
         System.out.println("Peek olha objeto no topo da pilha mas nao remove nao remove" + stackCarros.peek());
         System.out.println(stackCarros);
 
-
         System.out.println(stackCarros.empty());
 
 
