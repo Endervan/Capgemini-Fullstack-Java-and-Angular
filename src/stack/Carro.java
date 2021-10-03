@@ -1,4 +1,4 @@
-package equals.hashcode;
+package stack;
 
 import java.util.Objects;
 
