@@ -122,7 +122,7 @@ Os códigos estão rodando normalmente na plataforma da DIO.
 
 <!-- Javascript -->
 <details>
-  <summary><span>Java</span></summary>
+  <summary><span>Javascript</span></summary>
   <div align="left">
    <table border="1">
               <tbody><tr>
