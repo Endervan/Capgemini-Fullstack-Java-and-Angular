@@ -16,24 +16,34 @@ export class CourseService {
 var COURSES: Course[] = [
   {
     id: 1,
-    name: 'teste angular',
-    description: 'curso angular basico com directives,',
+    name: ' Angular',
+    description: 'curso angular basico com components,',
     imgUrl: '/assets/images/01.png',
     price: 50,
     code: 'xsp-401',
     duration: 120,
     rating: 5.4,
-    releaseDate: 'dezembro, 10 2021'
+    releaseDate: '12, 10 2021'
   }, {
     id: 2,
-    name: 'teste java',
-    description: 'curso Java destinado a  basico com arrays,',
+    name: ' Java',
+    description: 'curso Java   com arrays,',
     imgUrl: '/assets/images/02.png',
     price: 100,
     code: 'xsp-500',
     duration: 50,
     rating: 4.1,
-    releaseDate: 'janeiro, 22 2021'
+    releaseDate: '01, 22 2021'
+  }, {
+    id: 3,
+    name: ' Ionic',
+    description: 'curso Ionic  android, Native',
+    imgUrl: '/assets/images/03.png',
+    price: 100,
+    code: 'xsp-500',
+    duration: 110,
+    rating: 1.5,
+    releaseDate: '06, 22 2021'
   },
 ]
 
