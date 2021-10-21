@@ -1,5 +1,5 @@
 <div class="container">
-  <h2>vindo setado do templateUrl</h2>
+  <h2 class="text-center">Listas de Cursos</h2>
 
   <table class="table table-striped">
     <thead>
@@ -13,14 +13,14 @@
     </thead>
     <tbody>
     <tr *ngFor="let course of courses">
-      <td>{{course.id}}</td>
+      <td><img [src]="course.imgUrl" width="40" alt=""></td>
       <td>{{course.name}}</td>
-      <td>{{course.imgUrl}}</td>
       <td>{{course.price}}</td>
       <td>{{course.code}}</td>
-      <td>{{course.duration}}</td>
       <td>{{course.releaseDate}}</td>
-      <td>{{course.rating }}</td>
+      <td>
+        <app-star [rating]="course.rating"></app-star>
+      </td>
       <td></td>
     </tr>
     </tbody>
