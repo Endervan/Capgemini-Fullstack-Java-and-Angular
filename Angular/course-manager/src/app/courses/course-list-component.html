@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>vindo setado do templateUrl</h2>
+
+  <table class="table table-striped">
+    <thead>
+    <th>Image</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Code</th>
+    <th>Release Date</th>
+    <th>Rating</th>
+    <th>Opções</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let course of courses">
+      <td>{{course.id}}</td>
+      <td>{{course.name}}</td>
+      <td>{{course.imgUrl}}</td>
+      <td>{{course.price}}</td>
+      <td>{{course.code}}</td>
+      <td>{{course.duration}}</td>
+      <td>{{course.releaseDate}}</td>
+      <td>{{course.rating }}</td>
+      <td></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
