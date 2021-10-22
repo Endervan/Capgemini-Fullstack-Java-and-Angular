@@ -36,6 +36,12 @@ export class CourseService {
     }
   }
 
+  // mostra detalhe de cada item
+  deleteById(id: number): Observable<any> {
+    return this.httpClient.delete<any>(`${this.courseUrl}/${id}`);
+
+  }
+
 
 }
 

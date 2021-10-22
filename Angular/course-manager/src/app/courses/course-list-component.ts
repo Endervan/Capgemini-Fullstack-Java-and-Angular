@@ -40,4 +40,13 @@ export class CourseListComponent implements OnInit {
     })
   }
 
+  deleteById(courseById:number):void{
+    this.courseService.deleteById(courseById).subscribe({
+      next: () => {
+       console.log('Course deletado com sucesso');
+       this.retrieveAll();// atualizar lista novamente dps do delete
+      }, error: err => console.log('Erro ao deleta Back ==> ', err)
+    })
+  }
+
 }
