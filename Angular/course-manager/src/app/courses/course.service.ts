@@ -1,15 +1,41 @@
 import {Injectable} from "@angular/core";
 import {Course} from "./course";
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class CourseService {
 
+  //base endpoint
+  private courseUrl: string = 'http://localhost:3100/api/courses';
 
-  retrieveAll(): Course[] {
-    return COURSES;
+  constructor(private httpClient: HttpClient) {
   }
+
+  // mostra lista toda
+  retrieveAll(): Observable<Course[]> {
+    return this.httpClient.get<Course[]>(this.courseUrl,);
+  }
+
+  // mostra detalhe de cada item
+  retrieveById(id: number): Observable<Course> {
+    return this.httpClient.get<Course>(`${this.courseUrl}/${id}`);
+
+  }
+
+  // salvando dados item
+  save(course: Course): Observable<Course> {
+    if (course.id) {
+      // atualizar
+      return this.httpClient.put<Course>(`${this.courseUrl}/${course.id}`, course);
+    } else {
+      // criar
+      return this.httpClient.post<Course>(`${this.courseUrl}`, course);
+    }
+  }
+
 
 }
 
@@ -18,7 +44,7 @@ var COURSES: Course[] = [
     id: 1,
     name: ' Angular',
     description: 'curso angular basico com components,',
-    imgUrl: '/assets/images/01.png',
+    imageUrl: '/assets/images/01.png',
     price: 50,
     code: 'xsp-401',
     duration: 120,
@@ -28,7 +54,7 @@ var COURSES: Course[] = [
     id: 2,
     name: ' Java',
     description: 'curso Java   com arrays,',
-    imgUrl: '/assets/images/02.png',
+    imageUrl: '/assets/images/02.png',
     price: 100,
     code: 'xsp-500',
     duration: 50,
@@ -38,7 +64,7 @@ var COURSES: Course[] = [
     id: 3,
     name: ' Ionic',
     description: 'curso Ionic  android, Native',
-    imgUrl: '/assets/images/03.png',
+    imageUrl: '/assets/images/03.png',
     price: 100,
     code: 'xsp-500',
     duration: 110,

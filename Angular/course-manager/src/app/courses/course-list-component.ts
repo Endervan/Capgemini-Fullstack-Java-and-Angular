@@ -15,9 +15,9 @@ export class CourseListComponent implements OnInit {
   constructor(private courseService: CourseService) {
   }
 
-  ngOnInit(): void {
-    this._courses = this.courseService.retrieveAll()
-    this.filterCourses = this._courses;
+  // saida ngModel
+  get filter() {
+    return this._filterBy;
   }
 
   // entrada ngModel
@@ -27,9 +27,17 @@ export class CourseListComponent implements OnInit {
     this.filterCourses = this._courses.filter((course: Course) => course.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
   }
 
-  // saida ngModel
-  get filter() {
-    return this._filterBy;
+  ngOnInit(): void {
+    this.retrieveAll();
+  }
+
+  retrieveAll(): void {
+    this.courseService.retrieveAll().subscribe({
+      next: courses => {
+        this._courses = courses;
+        this.filterCourses = this._courses;
+      }, error: err => console.log('Erro back ==> ', err)
+    })
   }
 
 }

@@ -20,7 +20,7 @@
     </thead>
     <tbody>
     <tr *ngFor="let course of filterCourses">
-      <td><img [src]="course.imgUrl" width="40" alt=""></td>
+      <td><img [src]="course.imageUrl" width="40" alt=""></td>
       <td>{{course.name}}</td>
       <td>{{course.price}}</td>
       <td>{{course.code | lowercase | replace:'-': ''}}</td>
@@ -29,7 +29,7 @@
         <app-star [rating]="course.rating"></app-star>
       </td>
       <td>
-        <a [routerLink]="['/courses/info',course.id]" class="btn btn-primary" ><span class="fa fa-"></span></a>
+        <a [routerLink]="['/courses/info',course.id]" class="btn btn-primary" ><span class="fa fa-pencil"></span></a>
       </td>
     </tr>
     </tbody>
