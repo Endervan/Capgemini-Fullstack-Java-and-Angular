@@ -2,23 +2,21 @@ import {NgModule} from "@angular/core";
 import {CourseListComponent} from "./course-list-component";
 import {CourseInfoComponent} from "./course-info.component";
 import {RouterModule} from "@angular/router";
-import {Erro404Component} from "../error-404/erro404.component";
 import {FormsModule} from "@angular/forms";
-import {StarComponent} from "../star/star-component";
-import {ReplacePipe} from "../pipe/replace.pipe";
-import {AppComponent} from "../app.component";
 import {CommonModule} from "@angular/common";
+import {StarModule} from "../shared/component/star/star.module";
+import {AppPipeModule} from "../shared/pipe/app-pipe.module";
 
 @NgModule({
   declarations: [
     CourseListComponent,
     CourseInfoComponent,
-    StarComponent,
-    ReplacePipe,
   ],
   imports: [
     CommonModule,
     FormsModule,
+    StarModule,
+    AppPipeModule,
     RouterModule.forRoot([
       {
         path: 'courses', component: CourseListComponent
