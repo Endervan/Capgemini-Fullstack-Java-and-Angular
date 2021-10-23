@@ -13,6 +13,11 @@ export class CadastroFilmesComponent implements OnInit {
   constructor(private fb: FormBuilder) {
   }
 
+  // retorna todos campos
+  get f() {
+    return this.cadastro.controls;
+  }
+
   ngOnInit() {
 
     this.cadastro = this.fb.group({
@@ -28,6 +33,7 @@ export class CadastroFilmesComponent implements OnInit {
   }
 
   salva(): void {
+    this.cadastro.markAllAsTouched();
     if (this.cadastro.invalid) {
       return;
     }
