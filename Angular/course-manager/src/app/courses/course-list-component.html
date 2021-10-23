@@ -29,7 +29,7 @@
         <app-star [rating]="course.rating"></app-star>
       </td>
       <td>
-        <a [routerLink]="['/courses/info',course.id]" class="ml-1 btn btn-primary mr-6" ><span class="fa fa-pencil "></span></a>
+        <a [routerLink]="['/courses/info/',course.id]" class="ml-1 btn btn-primary mr-6" ><span class="fa fa-pencil "></span></a>
         <a (click)="deleteById(course.id)" class="btn btn-danger" ><span class="fa fa-remove"></span></a>
       </td>
     </tr>
