@@ -7,9 +7,9 @@
 
         <mat-form-field class="full-width">
           <input matInput placeholder="Título *" name="titulo" formControlName="titulo">
-          <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.titulo.errors && f.titulo.errors.required">Obrigátorio</mat-error>
-          <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.titulo.errors && f.titulo.errors.minLength">Minimo 2 caracteres</mat-error>
-          <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.titulo.errors && f.titulo.errors.maxLength">Maximo 256 caracteres </mat-error>
+          <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.titulo.errors?.required">Obrigátorio</mat-error>
+          <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.titulo.errors?.minLength">Minimo 2 caracteres</mat-error>
+          <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.titulo.errors?.maxLength">Maximo 256 caracteres </mat-error>
         </mat-form-field>
 
         <mat-form-field class="full-width">
@@ -43,9 +43,9 @@
                  placeholder="Nota IMDb"
                  name="nota"
                  formControlName="nota">
-          <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.titulo.errors && f.titulo.errors.required">Obrigátorio</mat-error>
-          <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.titulo.errors && f.titulo.errors.min">Precisa ter minimo valor 0</mat-error>
-          <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.titulo.errors && f.titulo.errors.max">Campo valor maximo a 10  </mat-error>
+          <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.titulo.errors?.required">Obrigátorio</mat-error>
+          <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.titulo.errors?.min">Precisa ter minimo valor 0</mat-error>
+          <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.titulo.errors?.max">Campo valor maximo a 10  </mat-error>
         </mat-form-field>
 
         <mat-form-field class="full-width">
