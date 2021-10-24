@@ -5,6 +5,7 @@ import {Filme} from '../../shared/models/filme';
 import {FilmesService} from '../../core/filmes.service';
 import {MatDialog} from '@angular/material';
 import {AlertaComponent} from '../../shared/components/campos/alerta/alerta.component';
+import {Alerta} from '../../shared/models/alerta';
 
 @Component({
   selector: 'app-cadastro-filmes',
@@ -61,7 +62,15 @@ export class CadastroFilmesComponent implements OnInit {
 
   private salvar(filme: Filme): void {
     this.filmesService.salvar(filme).subscribe(() => {
-      const dialogRef = this.dialog.open(AlertaComponent);
+      const config = {
+        data: {
+          btnSucesso: 'Ir para Listagem',
+          btnCancelar: 'Cadastra Novo Filme',
+          corBntCancelar: 'primary',
+          possuirBtnFechar: true
+        } as Alerta
+      };
+      const dialogRef = this.dialog.open(AlertaComponent, config);
 
     }, () => {
       alert('erro ao salvar');
