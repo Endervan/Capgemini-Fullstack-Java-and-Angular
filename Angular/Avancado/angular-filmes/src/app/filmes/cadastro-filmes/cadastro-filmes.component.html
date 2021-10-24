@@ -2,7 +2,7 @@
 <div class="main-div">
   <mat-card class="center width50">
 
-    <form [formGroup]="cadastro" (ngSubmit)="salva()" (reset)="reiniciarForm()" action="">
+    <form autocomplete="off" novalidate [formGroup]="cadastro" (ngSubmit)="salva()" (reset)="reiniciarForm()" action="">
       <mat-card-content>
 
         <app-input-text titulo="Titulo *" controlName="titulo" [formGroup]="cadastro"></app-input-text>
@@ -11,7 +11,7 @@
         <app-input-textarea titulo="Descrição " controlName="descricao" [formGroup]="cadastro"></app-input-textarea>
         <app-input-number titulo="Nota IMDb * " step="0.1" controlName="nota" [formGroup]="cadastro"></app-input-number>
         <app-input-text titulo="Link IMDb " controlName="urlIMDb" [formGroup]="cadastro"></app-input-text>
-        <app-input-select titulo="Gênero * " controlName="genero" [formGroup]="cadastro"></app-input-select>
+        <app-input-select titulo="Gênero * "  [opcoes]="generos" controlName="genero" [formGroup]="cadastro"></app-input-select>
 
       </mat-card-content>
 

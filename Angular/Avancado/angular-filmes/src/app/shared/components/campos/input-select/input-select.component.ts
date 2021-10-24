@@ -11,6 +11,7 @@ export class InputSelectComponent {
   @Input() titulo: string;
   @Input() formGroup: FormGroup;
   @Input() controlName: string;
+  @Input() opcoes: Array<string>; // criando array de cateegoria de filmes
 
   constructor(public validacao: ValidarCamposService) {
   }
