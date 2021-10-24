@@ -11,13 +11,17 @@ const url = 'http://localhost:3000/filmes/';
 })
 
 
-
 export class FilmesService {
 
   constructor(private httpClient: HttpClient) {
   }
 
+  // salvando filme
   salvar(filme: Filme): Observable<Filme> {
     return this.httpClient.post<any>(url, filme);
+  }
+
+  Listar(): Observable<Filme[]> {
+    return this.httpClient.get<Filme[]>(url);
   }
 }

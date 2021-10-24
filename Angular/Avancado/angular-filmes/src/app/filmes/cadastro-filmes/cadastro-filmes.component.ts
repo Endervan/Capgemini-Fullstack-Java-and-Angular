@@ -84,8 +84,6 @@ export class CadastroFilmesComponent implements OnInit {
           this.reiniciarForm();
         }
       });
-
-
     }, () => {
       const config = {
         data: {
@@ -95,9 +93,11 @@ export class CadastroFilmesComponent implements OnInit {
           btnSucesso: 'Fechar',
         } as Alerta
       };
+      // mensagens personalizada pra back
       this.dialog.open(AlertaComponent, config);
-
     });
   }
+
+
 
 }
