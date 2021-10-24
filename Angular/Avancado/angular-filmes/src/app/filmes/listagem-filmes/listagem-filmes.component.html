@@ -1,4 +1,30 @@
 <mat-toolbar class="app-title">Filmes Cadastrados</mat-toolbar>
+
+<!--barra pesquisar-->
+<mat-card class="float-left margin10 filtro-listagem">
+  <form autocomplete="off" novalidate [formGroup]="filtrosListagem">
+     <div class="float-left width50">
+       <div class="padding10">
+       <app-input-text titulo="Pesquise Aqui"
+                       controlName="texto"
+                       [formGroup]="filtrosListagem">
+       </app-input-text>
+     </div>
+   </div>
+
+    <div class="padding10">
+      <div class="float-left width50">
+        <app-input-select titulo="Gênero"
+                          [opcoes]="generos"
+                          controlName="genero"
+                          [formGroup]="filtrosListagem">
+        </app-input-select>
+      </div>
+    </div>
+
+  </form>
+</mat-card>
+
 <div class="home-content"
      infiniteScroll
      (scrolled)="onScroll()"

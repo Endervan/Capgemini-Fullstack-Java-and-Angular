@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup} from '@angular/forms';
 import {FilmesService} from '../../core/filmes.service';
 import {Filme} from '../../shared/models/filme';
 
@@ -16,13 +17,19 @@ export class ListagemFilmesComponent implements OnInit {
   readonly qntPagina = 4; // readonly => nao pode ser alterada
   pagina = 0;
   filmes: Filme[] = [];
+  filtrosListagem: FormGroup;
+  generos: Array<string>;
 
-
-  constructor(private filmesService: FilmesService) {
+  constructor(private filmesService: FilmesService, private fb: FormBuilder) {
   }
 
   ngOnInit(): void {
+    this.filtrosListagem = this.fb.group({
+      texto: [''],
+      genero: ['']
+    });
     this.listarFilmes();
+    this.generos = ['Ação', 'Aventura', 'Ficção Científica', 'Romance', 'Terror', 'Comédia', 'Drama'];
   }
 
   // scroll infinito

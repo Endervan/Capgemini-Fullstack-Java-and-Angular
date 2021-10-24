@@ -3,15 +3,20 @@
   flex-wrap: wrap;
   width: calc(100% - 20px);
   justify-content: space-between;
-   padding: 10px;
+  padding: 10px;
+
   .home-card {
     margin-bottom: 10px;
 
   }
 }
 
-.mat-card-image{
-  width:auto;
+.filtro-listagem {
+  width: calc(100% - 50px);
+}
+
+.mat-card-image {
+  width: auto;
   margin: auto;
   display: block;
 }
@@ -33,12 +38,16 @@
 }
 
 @media screen and (min-width: 1200px) {
-    .home-content {
-      .home-card {
-        width: calc(25% - 52px);
-      }
+  .home-content {
+    .home-card {
+      width: calc(25% - 52px);
     }
   }
+}
+
+.padding10{
+  padding: 10px;
+}
 
 //p {
 //  font-family: Lato;
