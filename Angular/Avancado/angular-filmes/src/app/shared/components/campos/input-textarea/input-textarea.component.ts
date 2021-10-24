@@ -9,7 +9,7 @@ import {AbstractControl, FormGroup} from '@angular/forms';
 })
 export class InputTextareaComponent {
 
-  @Input() descricao: string;
+  @Input() titulo: string;
   @Input() formGroup: FormGroup;
   @Input() controlName: string;
 

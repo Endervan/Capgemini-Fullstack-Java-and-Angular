@@ -1,1 +1,15 @@
-<p>input-select works!</p>
+<div [formGroup]="formGroup">
+  <mat-form-field class="full-width">
+    <mat-select
+      [placeholder]="titulo"
+      [formControlName]="controlName">
+      <mat-option value="Ação">Açao</mat-option>
+      <mat-option value="Aventura">Aventura</mat-option>
+      <mat-option value=">Ficção Científica">Ficção Científica</mat-option>
+      <mat-option value="Romance">Romance</mat-option>
+      <mat-option value="Terror">Terror</mat-option>
+    </mat-select>
+    <mat-error *ngIf="validacao.hasError(formControl,'required')">Obrigátorio</mat-error>
+  </mat-form-field>
+
+</div>

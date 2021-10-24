@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {AbstractControl, FormGroup} from '@angular/forms';
+import {ValidarCamposService} from '../validar-campos.service';
 
 @Component({
-  selector: 'input-select',
+  selector: 'app-input-select',
   templateUrl: './input-select.component.html',
   styleUrls: ['./input-select.component.scss']
 })
-export class InputSelectComponent implements OnInit {
+export class InputSelectComponent {
+  @Input() titulo: string;
+  @Input() formGroup: FormGroup;
+  @Input() controlName: string;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(public validacao: ValidarCamposService) {
   }
 
+  get formControl(): AbstractControl {
+    return this.formGroup.controls[this.controlName];
+  }
 }
