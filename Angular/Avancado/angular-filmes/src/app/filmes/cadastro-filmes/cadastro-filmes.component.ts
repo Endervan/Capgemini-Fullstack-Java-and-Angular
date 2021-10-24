@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ValidarCamposService} from '../../shared/components/campos/validar-campos.service';
+import {Filme} from '../../shared/models/filme';
+import {FilmesService} from '../../core/filmes.service';
 
 @Component({
   selector: 'app-cadastro-filmes',
@@ -12,7 +14,7 @@ export class CadastroFilmesComponent implements OnInit {
   cadastro: FormGroup;
   generos: Array<string>;
 
-  constructor(public validacao: ValidarCamposService, private fb: FormBuilder) {
+  constructor(public validacao: ValidarCamposService, private fb: FormBuilder, private filmesService: FilmesService) {
   }
 
   // retorna todos campos
@@ -31,19 +33,34 @@ export class CadastroFilmesComponent implements OnInit {
       genero: ['', [Validators.required]],
     });
 
+    // populando selects
     this.generos = ['Ação', 'Aventura', 'Ficção Científica', 'Romance', 'Terror', 'Comédia', 'Drama'];
 
   }
 
-  salva(): void {
+  // salvado filme
+  submit(): void {
     this.cadastro.markAllAsTouched();
     if (this.cadastro.invalid) {
       return;
     }
-    alert(JSON.stringify(this.cadastro.value, null, 4));
+    // getRawValue() as filmes=> garantir retorna campos formGroup do cadastro
+    const filme = this.cadastro.getRawValue() as Filme;
+    this.salvar(filme);
+    this.reiniciarForm();
+    // alert(JSON.stringify(this.cadastro.value, null, 4));
   }
 
   reiniciarForm(): void {
     this.cadastro.reset();
   }
+
+  private salvar(filme: Filme): void {
+    this.filmesService.salvar(filme).subscribe(() => {
+      alert('sucesso');
+    }, () => {
+      alert('erro ao salvar');
+    });
+  }
+
 }

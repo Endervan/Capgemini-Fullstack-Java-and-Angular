@@ -3,14 +3,14 @@ import { NgModule } from '@angular/core';
 import { LayoutModule } from '@angular/cdk/layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
-
-import { AppComponent } from './app.component';
+import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app.routing.module';
 
+import { AppComponent } from './app.component';
 import { MaterialModule } from './shared/material/material.module';
 import { TopoComponent } from './shared/components/topo/topo.component';
-import { RodapeComponent } from './shared/components/rodape/rodape.component';
 
+import { RodapeComponent } from './shared/components/rodape/rodape.component';
 import { FilmesModule } from './filmes/filmes.module';
 
 
@@ -23,6 +23,7 @@ import { FilmesModule } from './filmes/filmes.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     LayoutModule,
     MaterialModule,
     AppRoutingModule,

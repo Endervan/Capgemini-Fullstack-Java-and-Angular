@@ -2,7 +2,7 @@
 <div class="main-div">
   <mat-card class="center width50">
 
-    <form autocomplete="off" novalidate [formGroup]="cadastro" (ngSubmit)="salva()" (reset)="reiniciarForm()" action="">
+    <form autocomplete="off" novalidate [formGroup]="cadastro" (ngSubmit)="submit()" (reset)="reiniciarForm()" action="">
       <mat-card-content>
 
         <app-input-text titulo="Titulo *" controlName="titulo" [formGroup]="cadastro"></app-input-text>
