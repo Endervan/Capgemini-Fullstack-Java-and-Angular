@@ -3,6 +3,8 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ValidarCamposService} from '../../shared/components/campos/validar-campos.service';
 import {Filme} from '../../shared/models/filme';
 import {FilmesService} from '../../core/filmes.service';
+import {MatDialog} from '@angular/material';
+import {AlertaComponent} from '../../shared/components/campos/alerta/alerta.component';
 
 @Component({
   selector: 'app-cadastro-filmes',
@@ -14,7 +16,10 @@ export class CadastroFilmesComponent implements OnInit {
   cadastro: FormGroup;
   generos: Array<string>;
 
-  constructor(public validacao: ValidarCamposService, private fb: FormBuilder, private filmesService: FilmesService) {
+  constructor(public validacao: ValidarCamposService,
+              public dialog: MatDialog,
+              private fb: FormBuilder,
+              private filmesService: FilmesService) {
   }
 
   // retorna todos campos
@@ -47,7 +52,6 @@ export class CadastroFilmesComponent implements OnInit {
     // getRawValue() as filmes=> garantir retorna campos formGroup do cadastro
     const filme = this.cadastro.getRawValue() as Filme;
     this.salvar(filme);
-    this.reiniciarForm();
     // alert(JSON.stringify(this.cadastro.value, null, 4));
   }
 
@@ -57,7 +61,8 @@ export class CadastroFilmesComponent implements OnInit {
 
   private salvar(filme: Filme): void {
     this.filmesService.salvar(filme).subscribe(() => {
-      alert('sucesso');
+      const dialogRef = this.dialog.open(AlertaComponent);
+
     }, () => {
       alert('erro ao salvar');
     });

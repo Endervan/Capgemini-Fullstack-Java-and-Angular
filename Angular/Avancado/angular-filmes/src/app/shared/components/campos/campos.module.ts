@@ -7,6 +7,7 @@ import { InputSelectComponent } from './input-select/input-select.component';
 import { InputDateComponent } from './input-date/input-date.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MaterialModule} from '../../material/material.module';
+import { AlertaComponent } from './alerta/alerta.component';
 
 
 
@@ -16,7 +17,8 @@ import {MaterialModule} from '../../material/material.module';
     InputNumberComponent,
     InputTextareaComponent,
     InputSelectComponent,
-    InputDateComponent
+    InputDateComponent,
+    AlertaComponent
   ],
   imports: [
     CommonModule,
