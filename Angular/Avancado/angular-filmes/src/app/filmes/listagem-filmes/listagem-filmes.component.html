@@ -1,5 +1,8 @@
 <mat-toolbar class="app-title">Filmes Cadastrados</mat-toolbar>
-<div class="home-content">
+<div class="home-content"
+     infiniteScroll
+     (scrolled)="onScroll()"
+     *ngIf="filmes.length; else semRegistro">
 
   <mat-card class="home-card" *ngFor="let filme of filmes">
     <mat-card-header>
@@ -7,15 +10,19 @@
       <mat-card-title>{{filme.titulo}}</mat-card-title>
       <mat-card-subtitle>{{filme.genero}}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="{{filme.urlFoto}}" alt="Angular Material 7">
+    <img mat-card-image [src]="filme.urlFoto || semFoto" alt="Angular Material 7">
     <mat-card-content>
       <p>
         {{filme.descricao}}
       </p>
     </mat-card-content>
     <mat-card-actions>
-      <button color="accent"  mat-raised-button>ABRIR</button>
+      <button color="accent" mat-raised-button>ABRIR</button>
     </mat-card-actions>
   </mat-card>
 
 </div>
+
+<ng-template #semRegistro>
+  <h1 class="full-width main-div">Nenhum registro encontrado!</h1>
+</ng-template>
