@@ -1,9 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
+import {MatDialog} from '@angular/material';
+
 import {ValidarCamposService} from '../../shared/components/campos/validar-campos.service';
 import {Filme} from '../../shared/models/filme';
 import {FilmesService} from '../../core/filmes.service';
-import {MatDialog} from '@angular/material';
 import {AlertaComponent} from '../../shared/components/campos/alerta/alerta.component';
 import {Alerta} from '../../shared/models/alerta';
 
@@ -20,7 +22,8 @@ export class CadastroFilmesComponent implements OnInit {
   constructor(public validacao: ValidarCamposService,
               public dialog: MatDialog,
               private fb: FormBuilder,
-              private filmesService: FilmesService) {
+              private filmesService: FilmesService,
+              private router: Router) {
   }
 
   // retorna todos campos
@@ -72,8 +75,28 @@ export class CadastroFilmesComponent implements OnInit {
       };
       const dialogRef = this.dialog.open(AlertaComponent, config);
 
+      // acoes depis que fecha modal
+      dialogRef.afterClosed().subscribe((opcao: boolean) => {
+        if (opcao) {
+          this.router.navigateByUrl('filmes');
+        } else {
+          // limpa formulario atual
+          this.reiniciarForm();
+        }
+      });
+
+
     }, () => {
-      alert('erro ao salvar');
+      const config = {
+        data: {
+          titulo: 'Erro ao salva o registro ',
+          descricao: 'Não Conseguimos Salva seu registro! Favor Tenta Novamente Mais Tarde',
+          corBntSucesso: 'wan',
+          btnSucesso: 'Fechar',
+        } as Alerta
+      };
+      this.dialog.open(AlertaComponent, config);
+
     });
   }
 
