@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {ValidarCamposService} from '../../shared/components/campos/validar-campos.service';
 
 @Component({
   selector: 'app-cadastro-filmes',
@@ -10,7 +11,7 @@ export class CadastroFilmesComponent implements OnInit {
 
   cadastro: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(public validacao: ValidarCamposService, private fb: FormBuilder) {
   }
 
   // retorna todos campos

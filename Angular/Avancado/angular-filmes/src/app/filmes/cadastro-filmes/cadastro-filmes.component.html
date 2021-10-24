@@ -7,14 +7,14 @@
 
         <mat-form-field class="full-width">
           <input matInput placeholder="Título *" name="titulo" formControlName="titulo">
-          <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.titulo.errors?.required">Obrigátorio</mat-error>
-          <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.titulo.errors?.minLength">Minimo 2 caracteres</mat-error>
-          <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.titulo.errors?.maxLength">Maximo 256 caracteres </mat-error>
+          <mat-error *ngIf="validacao.hasErrorValidate(f.titulo,'required')">Obrigátorio</mat-error>
+          <mat-error *ngIf="validacao.hasErrorValidate(f.titulo,'minlength')">Minimo 2 caracteres</mat-error>
+          <mat-error *ngIf="validacao.hasErrorValidate(f.titulo,'maxlength')">Maximo 256 caracteres </mat-error>
         </mat-form-field>
 
         <mat-form-field class="full-width">
           <input matInput placeholder="Link Foto" name="urlFoto" formControlName="urlFoto">
-          <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.urlFoto.errors && f.urlFoto.errors.minLength">Obrigátorio (minimo 10 caracters)</mat-error>
+          <mat-error *ngIf="validacao.hasErrorValidate(f.urlFoto,'minlength')">Obrigátorio (minimo 10 caracters)</mat-error>
         </mat-form-field>
 
         <mat-form-field class="full-width">
@@ -27,7 +27,7 @@
                  (click)="picker.open()"/>
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
-          <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.dtLacamento.errors && f.dtLacamento.errors.required">Obrigátorio</mat-error>
+          <mat-error *ngIf="validacao.hasErrorValidate(f.dtLacamento,'required')">Obrigátorio</mat-error>
         </mat-form-field>
 
         <mat-form-field class="full-width">
@@ -40,12 +40,12 @@
                  min="1"
                  max="10"
                  step="1"
-                 placeholder="Nota IMDb"
+                 placeholder="Nota IMDb *"
                  name="nota"
                  formControlName="nota">
-          <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.titulo.errors?.required">Obrigátorio</mat-error>
-          <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.titulo.errors?.min">Precisa ter minimo valor 0</mat-error>
-          <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.titulo.errors?.max">Campo valor maximo a 10  </mat-error>
+          <mat-error *ngIf="validacao.hasError(f.nota,'required')">Obrigátorio</mat-error>
+          <mat-error *ngIf="validacao.hasError(f.nota,'minlength')">Precisa ter minimo valor 0</mat-error>
+          <mat-error *ngIf="validacao.hasError(f.nota,'maxlength')">Campo valor maximo a 10  </mat-error>
         </mat-form-field>
 
         <mat-form-field class="full-width">
@@ -60,7 +60,7 @@
             <mat-option value="Romance">Romance</mat-option>
             <mat-option value="Terror">Terror</mat-option>
           </mat-select>
-          <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.genero.errors && f.genero.errors.required">Obrigátorio</mat-error>
+          <mat-error *ngIf="validacao.hasError(f.genero,'required')">Obrigátorio</mat-error>
         </mat-form-field>
 
       </mat-card-content>
