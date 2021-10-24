@@ -5,17 +5,10 @@
     <form [formGroup]="cadastro" (ngSubmit)="salva()" (reset)="reiniciarForm()" action="">
       <mat-card-content>
 
-        <mat-form-field class="full-width">
-          <input matInput placeholder="Título *" name="titulo" formControlName="titulo">
-          <mat-error *ngIf="validacao.hasErrorValidate(f.titulo,'required')">Obrigátorio</mat-error>
-          <mat-error *ngIf="validacao.hasErrorValidate(f.titulo,'minlength')">Minimo 2 caracteres</mat-error>
-          <mat-error *ngIf="validacao.hasErrorValidate(f.titulo,'maxlength')">Maximo 256 caracteres </mat-error>
-        </mat-form-field>
+        <app-input-text titulo="Titulo *" controlName="titulo" [formGroup]="cadastro"></app-input-text>
 
-        <mat-form-field class="full-width">
-          <input matInput placeholder="Link Foto" name="urlFoto" formControlName="urlFoto">
-          <mat-error *ngIf="validacao.hasErrorValidate(f.urlFoto,'minlength')">Obrigátorio (minimo 10 caracters)</mat-error>
-        </mat-form-field>
+        <app-input-text titulo="Link Foto" controlName="urlFoto" [formGroup]="cadastro"></app-input-text>
+
 
         <mat-form-field class="full-width">
           <input matInput
@@ -30,9 +23,9 @@
           <mat-error *ngIf="validacao.hasErrorValidate(f.dtLacamento,'required')">Obrigátorio</mat-error>
         </mat-form-field>
 
-        <mat-form-field class="full-width">
-          <textarea matInput placeholder="Descrição" name="descricao" formControlName="descricao"></textarea>
-        </mat-form-field>
+
+        <app-input-textarea titulo="Descrição " controlName="descricao" [formGroup]="cadastro"></app-input-textarea>
+
 
         <mat-form-field class="full-width">
           <input matInput
@@ -45,12 +38,12 @@
                  formControlName="nota">
           <mat-error *ngIf="validacao.hasError(f.nota,'required')">Obrigátorio</mat-error>
           <mat-error *ngIf="validacao.hasError(f.nota,'minlength')">Precisa ter minimo valor 0</mat-error>
-          <mat-error *ngIf="validacao.hasError(f.nota,'maxlength')">Campo valor maximo a 10  </mat-error>
+          <mat-error *ngIf="validacao.hasError(f.nota,'maxlength')">Campo valor maximo a 10</mat-error>
         </mat-form-field>
 
-        <mat-form-field class="full-width">
-          <input matInput placeholder="Link IMDb" name="urlIMDb" formControlName="urlIMDb">
-        </mat-form-field>
+
+        <app-input-text titulo="Link IMDb " controlName="urlIMDb" [formGroup]="cadastro"></app-input-text>
+
 
         <mat-form-field class="full-width">
           <mat-select placeholder="Gênero *" formControlName="genero">

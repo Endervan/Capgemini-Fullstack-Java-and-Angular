@@ -1,0 +1,13 @@
+<div [formGroup]="formGroup">
+  <mat-form-field class="full-width">
+    <textarea matInput
+           [placeholder]="descricao"
+           [name]="controlName"
+           [formControlName]="controlName">
+    </textarea>
+    <mat-error *ngIf="validacao.hasErrorValidate(formControl,'required')">Obrigátorio</mat-error>
+    <mat-error *ngIf="validacao.hasErrorValidate(formControl,'minlength')">Minimo 2 caracteres</mat-error>
+    <mat-error *ngIf="validacao.hasErrorValidate(formControl,'maxlength')">Maximo 256 caracteres</mat-error>
+  </mat-form-field>
+
+</div>
