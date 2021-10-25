@@ -16,6 +16,8 @@ export class ListagemFilmesComponent implements OnInit {
   // variavel pra scroll
   readonly qntPagina = 4; // readonly => nao pode ser alterada
   pagina = 0;
+  texto: string;
+  genero: string;
   filmes: Filme[] = [];
   filtrosListagem: FormGroup;
   generos: Array<string>;
@@ -28,8 +30,23 @@ export class ListagemFilmesComponent implements OnInit {
       texto: [''],
       genero: ['']
     });
-    this.listarFilmes();
+
+    // campo pesquisa texto
+    this.filtrosListagem.get('texto').valueChanges.subscribe((val: string) => {
+      this.texto = val;
+      console.log(this.texto);
+      this.resetarConsultar();
+    });
+
+    // campo pesquisa select
+    this.filtrosListagem.get('genero').valueChanges.subscribe((val: string) => {
+      this.genero = val;
+      console.log(this.genero);
+      this.resetarConsultar();
+    });
     this.generos = ['Ação', 'Aventura', 'Ficção Científica', 'Romance', 'Terror', 'Comédia', 'Drama'];
+
+    this.resetarConsultar();
   }
 
   // scroll infinito
@@ -39,7 +56,13 @@ export class ListagemFilmesComponent implements OnInit {
 
   private listarFilmes(): void {
     this.pagina++;
-    this.filmesService.Listar(this.pagina, this.qntPagina)
+    this.filmesService.Listar(this.pagina, this.qntPagina, this.texto, this.genero)
       .subscribe((filmes: Filme[]) => this.filmes.push(...filmes));
+  }
+
+  private resetarConsultar(): void {
+    this.pagina = 0;
+    this.filmes = [];
+    this.listarFilmes();
   }
 }
