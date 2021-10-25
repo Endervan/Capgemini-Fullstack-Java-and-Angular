@@ -17,6 +17,7 @@ import {Alerta} from '../../shared/models/alerta';
 export class CadastroFilmesComponent implements OnInit {
 
   cadastro: FormGroup;
+  cadastro1: any;
   generos: Array<string>;
 
   constructor(public validacao: ValidarCamposService,
@@ -47,16 +48,18 @@ export class CadastroFilmesComponent implements OnInit {
 
   }
 
+
   // salvado filme
   submit(): void {
     this.cadastro.markAllAsTouched();
     if (this.cadastro.invalid) {
       return;
     }
-    // getRawValue() as filmes=> garantir retorna campos formGroup do cadastro
+    // getRawValue() as filmes=> garantir retorna todos campos formGroup do cadastro
     const filme = this.cadastro.getRawValue() as Filme;
     this.salvar(filme);
-    // alert(JSON.stringify(this.cadastro.value, null, 4));
+    alert(JSON.stringify(this.cadastro.value, null, 4));
+    // alert(JSON.stringify(filme, null, 4));
   }
 
   reiniciarForm(): void {
@@ -65,6 +68,7 @@ export class CadastroFilmesComponent implements OnInit {
 
   private salvar(filme: Filme): void {
     this.filmesService.salvar(filme).subscribe(() => {
+
       const config = {
         data: {
           btnSucesso: 'Ir para Listagem',
@@ -97,7 +101,6 @@ export class CadastroFilmesComponent implements OnInit {
       this.dialog.open(AlertaComponent, config);
     });
   }
-
 
 
 }

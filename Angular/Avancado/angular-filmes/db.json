@@ -51,84 +51,14 @@
       "id": 5
     },
     {
-      "titulo": "fsfdsaf",
-      "urlFoto": "",
+      "titulo": "vetta",
+      "urlFoto": null,
       "dtLacamento": "2021-10-05T03:00:00.000Z",
-      "descricao": "",
-      "nota": 0,
-      "urlIMDb": "",
-      "genero": "Romance",
+      "descricao": null,
+      "nota": 10,
+      "urlIMDb": null,
+      "genero": "Ficção Científica",
       "id": 6
-    },
-    {
-      "titulo": "fsfdsaf",
-      "urlFoto": "",
-      "dtLacamento": "2021-10-05T03:00:00.000Z",
-      "descricao": "",
-      "nota": 0,
-      "urlIMDb": "",
-      "genero": "Romance",
-      "id": 7
-    },
-    {
-      "titulo": "fsfsf",
-      "urlFoto": "",
-      "dtLacamento": "2021-10-06T03:00:00.000Z",
-      "descricao": "",
-      "nota": 0,
-      "urlIMDb": "",
-      "genero": "Terror",
-      "id": 8
-    },
-    {
-      "titulo": "FSAFSA",
-      "urlFoto": "",
-      "dtLacamento": "2021-10-06T03:00:00.000Z",
-      "descricao": "",
-      "nota": 0,
-      "urlIMDb": "",
-      "genero": "Romance",
-      "id": 9
-    },
-    {
-      "titulo": "dasdasda",
-      "urlFoto": "",
-      "dtLacamento": "2021-10-05T03:00:00.000Z",
-      "descricao": "",
-      "nota": 0,
-      "urlIMDb": "",
-      "genero": "Terror",
-      "id": 10
-    },
-    {
-      "titulo": "dasdasda",
-      "urlFoto": "",
-      "dtLacamento": "2021-10-05T03:00:00.000Z",
-      "descricao": "",
-      "nota": 0,
-      "urlIMDb": "",
-      "genero": "Terror",
-      "id": 11
-    },
-    {
-      "titulo": "dasda",
-      "urlFoto": "",
-      "dtLacamento": "2021-10-05T03:00:00.000Z",
-      "descricao": "",
-      "nota": 0,
-      "urlIMDb": "",
-      "genero": "Terror",
-      "id": 12
-    },
-    {
-      "titulo": "teste",
-      "urlFoto": "https://m.media-amazon.com/images/M/MV5BOTlhYTVkMDktYzIyNC00NzlkLTlmN2ItOGEyMWQ4OTA2NDdmXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",
-      "dtLancamento": "2021-07-11T03:00:00.000Z",
-      "descricao": "teste cadastro filmes usando json serve",
-      "nota": 7.3,
-      "urlIMDb": "https://www.imdb.com/title/tt0119654/",
-      "genero": "Ação",
-      "id": 13
     }
   ]
 }
