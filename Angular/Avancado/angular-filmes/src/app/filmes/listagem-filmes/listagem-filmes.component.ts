@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
+import { debounceTime } from 'rxjs/operators';
+
 import {FilmesService} from '../../core/filmes.service';
 import {Filme} from '../../shared/models/filme';
 import {ConfigParams} from '../../shared/models/config-params';
@@ -32,7 +34,9 @@ export class ListagemFilmesComponent implements OnInit {
     });
 
     // campo pesquisa texto
-    this.filtrosListagem.get('texto').valueChanges.subscribe((val: string) => {
+    this.filtrosListagem.get('texto').valueChanges
+      .pipe(debounceTime(400))
+      .subscribe((val: string) => {
       this.config.pesquisa = val;
       this.resetarConsultar();
     });

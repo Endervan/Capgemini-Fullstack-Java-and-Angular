@@ -38,8 +38,8 @@
     </mat-card-header>
     <img mat-card-image [src]="filme.urlFoto || semFoto" alt="Angular Material 7">
     <mat-card-content>
-      <p>
-        {{filme.descricao}}
+      <p class="quebra-linha">
+        {{filme.descricao || 'Nenhuma Descrição Informada !!'}}
       </p>
     </mat-card-content>
     <mat-card-actions>

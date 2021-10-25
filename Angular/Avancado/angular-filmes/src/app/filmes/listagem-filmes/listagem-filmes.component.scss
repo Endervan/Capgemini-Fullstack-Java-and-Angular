@@ -16,9 +16,15 @@
 }
 
 .mat-card-image {
-  width: auto;
+  width: 182px;
+  height: 282px;
   margin: auto;
   display: block;
+
+}
+
+.quebra-linha {
+  white-space: pre-line;
 }
 
 @media screen and (min-width: 525px) {
@@ -45,7 +51,7 @@
   }
 }
 
-.padding10{
+.padding10 {
   padding: 10px;
 }
 
