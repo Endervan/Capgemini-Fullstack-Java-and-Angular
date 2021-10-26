@@ -49,16 +49,6 @@
       "urlIMDb": "",
       "genero": "Romance",
       "id": 5
-    },
-    {
-      "titulo": "vetta",
-      "urlFoto": null,
-      "dtLacamento": "2021-10-05T03:00:00.000Z",
-      "descricao": null,
-      "nota": 10,
-      "urlIMDb": null,
-      "genero": "Ficção Científica",
-      "id": 6
     }
   ]
 }

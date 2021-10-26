@@ -36,6 +36,9 @@ export class FilmesService {
     return this.httpClient.get<Filme>(url + id);
   }
 
+  excluir(id: number): Observable<void> {
+    return this.httpClient.delete<void>(url + id);
+  }
 }
 
 

@@ -1,5 +1,5 @@
 <!--direciona caso nao existe o filme-->
-<mat-list role="list" *ngIf="filme;else router.navigateByUrl('filmes')">
+<mat-list role="list" *ngIf="filme;else semRegistro">
   <mat-list-item role="listitem">Titulo : {{filme.titulo}}</mat-list-item>
   <mat-list-item role="listitem"> Data Lançamento:{{filme.dtLancamento | date:'dd-MM-yyyy'}}</mat-list-item>
   <mat-list-item role="listitem"> Gênero :{{filme.genero  || 'Não Especificado'}}</mat-list-item>
@@ -7,3 +7,14 @@
   <img mat-card-image [src]="filme.urlFoto || semFoto" alt="Angular Material 7">
   <mat-list-item role="listitem">Descrição :{{filme.descricao}}</mat-list-item>
 </mat-list>
+
+<mat-card>
+  <mat-card-actions>
+    <button  color="accent" mat-raised-button (click)="editar(filme.id)">Editar</button>
+    <button  color="warn" mat-raised-button (click)="excluir()">Excluir</button>
+  </mat-card-actions>
+</mat-card>
+
+<ng-template #semRegistro>
+  <h1 class="full-width main-div">Nenhum registro encontrado!</h1>
+</ng-template>
