@@ -1,10 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
-import { debounceTime } from 'rxjs/operators';
+import {debounceTime} from 'rxjs/operators';
 
 import {FilmesService} from '../../core/filmes.service';
 import {Filme} from '../../shared/models/filme';
 import {ConfigParams} from '../../shared/models/config-params';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-dio-listagem-filmes',
@@ -24,7 +25,8 @@ export class ListagemFilmesComponent implements OnInit {
   filtrosListagem: FormGroup;
   generos: Array<string>;
 
-  constructor(private filmesService: FilmesService, private fb: FormBuilder) {
+  constructor(private filmesService: FilmesService, private fb: FormBuilder,
+              private router: Router) {
   }
 
   ngOnInit(): void {
@@ -37,9 +39,9 @@ export class ListagemFilmesComponent implements OnInit {
     this.filtrosListagem.get('texto').valueChanges
       .pipe(debounceTime(400))
       .subscribe((val: string) => {
-      this.config.pesquisa = val;
-      this.resetarConsultar();
-    });
+        this.config.pesquisa = val;
+        this.resetarConsultar();
+      });
 
     // campo pesquisa select
     this.filtrosListagem.get('genero').valueChanges.subscribe((val: string) => {
@@ -54,6 +56,12 @@ export class ListagemFilmesComponent implements OnInit {
   // scroll infinito
   onScroll(): void {
     this.listarFilmes();
+  }
+
+  // filmes detalhes
+  abrir(id: number): void {
+    console.log(id);
+    this.router.navigateByUrl('filmes/' + id);
   }
 
   private listarFilmes(): void {

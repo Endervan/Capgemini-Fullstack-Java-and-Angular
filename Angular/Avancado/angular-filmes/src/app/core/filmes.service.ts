@@ -27,11 +27,14 @@ export class FilmesService {
   // ex:_page,_limit,_sort(id'),_order(desc),q(texto),genero(genero)
   Listar(config: ConfigParams): Observable<Filme[]> {
     const configParams = this.configService.configurarParametros(config);
-      // back aceita == http://localhost:3000/filmes/?_page=1&_limit=1&_sort=id&_order=desc&_q=pessoaDigitar&genero=pessoaEscolheuNoSelect
+    // back aceita == http://localhost:3000/filmes/?_page=1&_limit=1&_sort=id&_order=desc&_q=pessoaDigitar&genero=pessoaEscolheuNoSelect
     // para fazer [scrool infinite]
     return this.httpClient.get<Filme[]>(url, {params: configParams});
   }
 
+  visualizar(id: number): Observable<Filme> {
+    return this.httpClient.get<Filme>(url + id);
+  }
 
 }
 
