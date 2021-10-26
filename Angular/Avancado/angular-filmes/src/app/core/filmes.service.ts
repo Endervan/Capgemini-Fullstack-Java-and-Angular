@@ -23,6 +23,11 @@ export class FilmesService {
     return this.httpClient.post<Filme>(url, filme);
   }
 
+  editar(filme: Filme): Observable<Filme> {
+    return this.httpClient.put<Filme>(url + filme.id, filme);
+
+  }
+
   // lista todos filme usando tambem pesquisar de acordo documentação desse backend
   // ex:_page,_limit,_sort(id'),_order(desc),q(texto),genero(genero)
   Listar(config: ConfigParams): Observable<Filme[]> {
@@ -39,6 +44,8 @@ export class FilmesService {
   excluir(id: number): Observable<void> {
     return this.httpClient.delete<void>(url + id);
   }
+
+
 }
 
 

@@ -70,8 +70,14 @@ export class CadastroFilmesComponent implements OnInit {
     }
     // getRawValue() as filmes=> garantir retorna todos campos formGroup do cadastro
     const filme = this.cadastro.getRawValue() as Filme;
-    this.salvar(filme);
-    alert(JSON.stringify(this.cadastro.value, null, 4));
+    if (this.id) {
+      filme.id = this.id; // especifica que vai manda tb id na requisição
+      console.log(filme.id);
+      this.editar(filme);
+    } else {
+      this.salvar(filme);
+    }
+    // alert(JSON.stringify(this.cadastro.value, null, 4));
     // alert(JSON.stringify(filme, null, 4));
   }
 
@@ -93,7 +99,6 @@ export class CadastroFilmesComponent implements OnInit {
 
   private salvar(filme: Filme): void {
     this.filmesService.salvar(filme).subscribe(() => {
-
       const config = {
         data: {
           btnSucesso: 'Ir para Listagem',
@@ -118,6 +123,34 @@ export class CadastroFilmesComponent implements OnInit {
         data: {
           titulo: 'Erro ao salva o registro ',
           descricao: 'Não Conseguimos Salva seu registro! Favor Tenta Novamente Mais Tarde',
+          corBntSucesso: 'wan',
+          btnSucesso: 'Fechar',
+        } as Alerta
+      };
+      // mensagens personalizada pra back
+      this.dialog.open(AlertaComponent, config);
+    });
+  }
+
+  private editar(filme: Filme): void {
+    this.filmesService.editar(filme).subscribe((result) => {
+      console.log(result);
+      const config = {
+        data: {
+          titulo: 'Registro Atualizado com sucesso',
+          descricao: 'Seu Registro foi Atualizado com sucesso',
+          btnSucesso: 'Ir para Listagem',
+        } as Alerta
+      };
+      const dialogRef = this.dialog.open(AlertaComponent, config);
+
+      // acoes depis que fecha modal
+      dialogRef.afterClosed().subscribe(() => this.router.navigateByUrl('filmes'));
+    }, () => {
+      const config = {
+        data: {
+          titulo: 'Erro ao Editar o registro ',
+          descricao: 'Não Conseguimos Editar seu registro! Favor Tenta Novamente Mais Tarde',
           corBntSucesso: 'wan',
           btnSucesso: 'Fechar',
         } as Alerta
