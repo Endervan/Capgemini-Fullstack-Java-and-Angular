@@ -1,6 +1,6 @@
 <mat-toolbar class="app-title">Cadastrar Filme</mat-toolbar>
 <div class="main-div">
-  <mat-card class="center width50">
+  <mat-card class="center width50" *ngIf="cadastro">
 
     <form autocomplete="off" novalidate  [formGroup]="cadastro" (ngSubmit)="submit()" (reset)="reiniciarForm()" action="">
       <mat-card-content>
