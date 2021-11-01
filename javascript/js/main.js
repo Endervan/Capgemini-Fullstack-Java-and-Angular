@@ -82,11 +82,11 @@
 // }
 
 
-let totalDeDias = 400;
-
-let ano = parseInt(totalDeDias/365);
-let mes = parseInt((totalDeDias%365)/30);
-let dia = (totalDeDias%365)%30;
-console.log(ano+" ano(s)");
-console.log(mes+" mes(es)");
+// let totalDeDias = 400;
+//
+// let ano = parseInt(totalDeDias/365);
+// let mes = parseInt((totalDeDias%365)/30);
+// let dia = (totalDeDias%365)%30;
+// console.log(ano+" ano(s)");
+// console.log(mes+" mes(es)");
 console.log(dia+" dia(s)");
