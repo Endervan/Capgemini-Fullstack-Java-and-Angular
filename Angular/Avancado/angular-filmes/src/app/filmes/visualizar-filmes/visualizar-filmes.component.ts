@@ -54,7 +54,6 @@ export class VisualizarFilmesComponent implements OnInit {
 
   // Editar filme
   editar() {
-
     this.router.navigateByUrl('filmes/cadastro/' + this.id);
   }
 

@@ -1,13 +1,13 @@
-import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {ActivatedRoute, Router} from '@angular/router';
-import {MatDialog} from '@angular/material';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
-import {ValidarCamposService} from '../../shared/components/campos/validar-campos.service';
-import {Filme} from '../../shared/models/filme';
-import {FilmesService} from '../../core/filmes.service';
-import {AlertaComponent} from '../../shared/components/campos/alerta/alerta.component';
-import {Alerta} from '../../shared/models/alerta';
+import { ValidarCamposService } from '../../shared/components/campos/validar-campos.service';
+import { Filme } from '../../shared/models/filme';
+import { FilmesService } from '../../core/filmes.service';
+import { AlertaComponent } from '../../shared/components/campos/alerta/alerta.component';
+import { Alerta } from '../../shared/models/alerta';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-cadastro-filmes',
@@ -24,11 +24,11 @@ export class CadastroFilmesComponent implements OnInit {
   filme: Filme;
 
   constructor(public validacao: ValidarCamposService,
-              public dialog: MatDialog,
-              private fb: FormBuilder,
-              private filmesService: FilmesService,
-              private router: Router,
-              private activedRouter: ActivatedRoute) {
+    public dialog: MatDialog,
+    private fb: FormBuilder,
+    private filmesService: FilmesService,
+    private router: Router,
+    private activedRouter: ActivatedRoute) {
   }
 
   // retorna todos campos
@@ -103,7 +103,7 @@ export class CadastroFilmesComponent implements OnInit {
         data: {
           btnSucesso: 'Ir para Listagem',
           btnCancelar: 'Cadastra Novo Filme',
-          corBntCancelar: 'primary',
+          corBntCancelar: 'warn',
           possuirBtnFechar: true
         } as Alerta
       };

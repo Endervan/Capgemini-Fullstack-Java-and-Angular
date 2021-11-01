@@ -57,26 +57,36 @@
 // var idade = prompt("Qual sua idade")
 // console.log(validaIdade(idade))
 
+//
+// function botao() {
+//     document.getElementById("agradecimento").innerHTML = "<b>obrigado por clicar</b>";
+// }
+//
+// function redirecionar() {
+//     window.open("https://github.com/Endervan/Capgemini-Fullstack-Java-and-Angular/")
+// }
+//
+// function trocar(elemento) {
+//     elemento.innerText="obrigado por passa o mouse";
+// // document.getElementById("mousermove").innerHTML="obrigado por passa o mouse";
+//
+// }
+// function voltar(elemento) {
+//     elemento.innerText="passe o  mouse aqui";
+//     // document.getElementById("mousermove").innerHTML="passe o  mouse aqui";
+//
+// }
+//
+// function funcaoChange(elemento) {
+//     console.log(elemento.value)
+// }
 
-function botao() {
-    document.getElementById("agradecimento").innerHTML = "<b>obrigado por clicar</b>";
-}
 
-function redirecionar() {
-    window.open("https://github.com/Endervan/Capgemini-Fullstack-Java-and-Angular/")
-}
+let totalDeDias = 400;
 
-function trocar(elemento) {
-    elemento.innerText="obrigado por passa o mouse";
-// document.getElementById("mousermove").innerHTML="obrigado por passa o mouse";
-
-}
-function voltar(elemento) {
-    elemento.innerText="passe o  mouse aqui";
-    // document.getElementById("mousermove").innerHTML="passe o  mouse aqui";
-
-}
-
-function funcaoChange(elemento) {
-    console.log(elemento.value)
-}
+let ano = parseInt(totalDeDias/365);
+let mes = parseInt((totalDeDias%365)/30);
+let dia = (totalDeDias%365)%30;
+console.log(ano+" ano(s)");
+console.log(mes+" mes(es)");
+console.log(dia+" dia(s)");

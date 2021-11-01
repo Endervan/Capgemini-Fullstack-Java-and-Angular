@@ -6,4 +6,5 @@ export interface ConfigParams {
   pesquisa?: string;
   campo?: CampoGenerico;
 
+
 }

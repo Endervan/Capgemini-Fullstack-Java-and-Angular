@@ -4,7 +4,6 @@
 
     <form autocomplete="off" novalidate  [formGroup]="cadastro" (ngSubmit)="submit()" (reset)="reiniciarForm()" action="">
       <mat-card-content>
-
         <app-input-text titulo="Titulo *" controlName="titulo" [formGroup]="cadastro"></app-input-text>
         <app-input-text titulo="Link Foto" controlName="urlFoto" [formGroup]="cadastro"></app-input-text>
         <app-input-date titulo="Data de Lançamento * " controlName="dtLacamento" [formGroup]="cadastro"></app-input-date>
@@ -12,7 +11,6 @@
         <app-input-number titulo="Nota IMDb * " step="0.1" controlName="nota" [formGroup]="cadastro"></app-input-number>
         <app-input-text titulo="Link IMDb " controlName="urlIMDb" [formGroup]="cadastro"></app-input-text>
         <app-input-select titulo="Gênero * "  [opcoes]="generos" controlName="genero" [formGroup]="cadastro"></app-input-select>
-
       </mat-card-content>
 
       <mat-card-actions>

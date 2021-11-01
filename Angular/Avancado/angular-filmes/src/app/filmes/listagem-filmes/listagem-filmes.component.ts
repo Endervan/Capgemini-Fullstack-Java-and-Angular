@@ -37,7 +37,8 @@ export class ListagemFilmesComponent implements OnInit {
 
     // campo pesquisa texto
     this.filtrosListagem.get('texto').valueChanges
-      .pipe(debounceTime(400))
+      .pipe(debounceTime(400)
+        )
       .subscribe((val: string) => {
         this.config.pesquisa = val;
         this.resetarConsultar();
