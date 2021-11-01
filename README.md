@@ -156,6 +156,39 @@ Os códigos estão rodando normalmente na plataforma da DIO.
                   <td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png">✔️</g-emoji></td>
           </tr>
           </tbody>
+          </table> 
+           <table border="1">
+              <tbody><tr>
+                  <th colspan="4">Desafios avançados de código em JavaScript</th>
+              </tr>
+              <tr>
+                  <th colspan="4"></th>
+              </tr>
+              <tr>
+                  <th>Etapa</th>
+                  <th>Desafio</th>
+                  <th>Solução</th>
+                  <th>Status</th>
+              </tr>
+              <tr>
+                  <td align="center">1</td>
+                  <td> Diferença</td>
+                  <td><a href="https://github.com/Endervan/Capgemini-Fullstack-Java-and-Angular/blob/master/JavaScript_ES6/Desafios/Diferenca.js">Código</a></td>
+                  <td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png">✔️</g-emoji></td>
+              </tr>
+              <tr>
+                  <td align="center">2</td>
+                  <td>Idade em dias</td>
+                  <td><a href="https://github.com/Endervan/Capgemini-Fullstack-Java-and-Angular/blob/master/JavaScript_ES6/Desafios/Idade-em-Dias.js">Código</a></td>
+                  <td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png">✔️</g-emoji></td>
+              </tr>
+              <tr>
+                  <td align="center">3</td>
+                  <td>Fila do Banco</td>
+                  <td><a href="https://github.com/Endervan/Capgemini-Fullstack-Java-and-Angular/blob/master/JavaScript_ES6/Desafios/Fila-banco.js">Código</a></td>
+                  <td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png">✔️</g-emoji></td>
+          </tr>
+          </tbody>
           </table>   
   </div>
   
