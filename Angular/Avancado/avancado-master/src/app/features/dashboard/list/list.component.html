@@ -1,0 +1,24 @@
+<div class="container">
+  <h3>Todos os todos</h3>
+
+  <div *ngFor="let item of list" class="item-card">
+    <label>{{ item.createdAt | date:'dd/MM/yyyy HH:mm' }}</label>
+
+    <h3 [class.done]="item.done">{{ item.title }}</h3>
+
+    <div class="actions">
+      <div class="first-column">
+        <div class="checkbox" (click)="markAsDone(item.id)">
+          <input type="checkbox" [checked]="item.done">
+          <label for="checkbox"><span>Feito</span></label>
+        </div>
+      </div>
+
+      <div class="second-column">
+        <u (click)="onDelete(item.id)">Deletar</u>
+      </div>
+    </div>
+  </div>
+
+  <button class="primary" (click)="loadMore()">Carregar mais</button>
+</div>

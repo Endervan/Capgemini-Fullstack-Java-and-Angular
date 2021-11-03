@@ -1,0 +1,16 @@
+@import "src/assets/variables";
+
+:host {
+  display: flex;
+  flex-direction: column;
+
+  > h3 {
+    margin-top: 0;
+    color: $primary;
+  }
+
+  > button {
+    margin-top: $d-space;
+    align-self: flex-end;
+  }
+}

@@ -1,0 +1,23 @@
+@import "src/assets/variables";
+
+:host {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+
+    > input {
+      margin-bottom: $d-space;
+    }
+
+    > button {
+      width: fit-content;
+      align-self: flex-end;
+    }
+  }
+}

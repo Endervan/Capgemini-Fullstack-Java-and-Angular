@@ -1,0 +1,53 @@
+@import "src/assets/variables";
+
+:host {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+  > .container {
+    width: 600px;
+
+    > .button {
+      margin-bottom: $d-space;
+    }
+
+    > .item-card {
+      margin-bottom: $space;
+      padding: $space;
+      box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
+      border: 3px solid transparent;
+  
+      &:hover {
+        border: 3px solid $primary;
+      }
+  
+      > h3 {
+        margin: 0;
+
+        &.done {
+          color: $text-secondary;
+        }
+      }
+
+      > .actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+
+        .first-column > div {
+          display: inline-flex;
+        }
+
+        > .second-column {
+          text-align: right;
+
+          > u {
+            color: $accent;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

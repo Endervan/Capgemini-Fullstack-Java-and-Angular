@@ -1,0 +1,18 @@
+{
+    "sourceFile": ".vscode/settings.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1635797551832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1635797551832,
+            "name": "Commit-0",
+            "content": "{\r\n    \"local-history.browser.descending\": false\r\n}\r\n"
+        }
+    ]
+}

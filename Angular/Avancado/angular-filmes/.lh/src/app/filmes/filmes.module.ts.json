@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/filmes/filmes.module.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1635797534824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1635797534824,
+            "name": "Commit-0",
+            "content": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { ReactiveFormsModule, FormsModule } from '@angular/forms';\nimport { InfiniteScrollModule } from 'ngx-infinite-scroll';\n\nimport { CadastroFilmesComponent } from './cadastro-filmes/cadastro-filmes.component';\nimport { MaterialModule } from '../shared/material/material.module';\nimport { ListagemFilmesComponent } from './listagem-filmes/listagem-filmes.component';\nimport { CamposModule } from '../shared/components/campos/campos.module';\nimport { VisualizarFilmesComponent } from './visualizar-filmes/visualizar-filmes.component';\n\n@NgModule({\n  imports: [\n    CommonModule,\n    MaterialModule,\n    ReactiveFormsModule,\n    FormsModule,\n    CamposModule,\n    InfiniteScrollModule,\n  ],\n  declarations: [CadastroFilmesComponent, ListagemFilmesComponent, VisualizarFilmesComponent]\n})\nexport class FilmesModule { }\n"
+        }
+    ]
+}

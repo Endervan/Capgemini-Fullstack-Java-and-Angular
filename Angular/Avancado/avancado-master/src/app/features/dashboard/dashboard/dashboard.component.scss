@@ -1,0 +1,23 @@
+@import "src/assets/variables";
+
+:host {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+  > .container {
+    width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: $d-space;
+    grid-template-areas: "greetings greetings"
+                         "content-1 content-2";
+
+    > .greetings {
+      padding: $d-space;
+      grid-area: greetings;
+      justify-self: center;
+    }
+  }
+}

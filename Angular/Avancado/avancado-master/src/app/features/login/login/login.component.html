@@ -1,0 +1,12 @@
+<form [formGroup]="form" (ngSubmit)="login()">
+  <label>Nome</label>
+  <input formControlName="name">
+
+  <label>E-mail</label>
+  <input formControlName="email">
+
+  <button class="primary">Login</button>
+  <jv-filho-component [receberGrana]="money"></jv-filho-component>
+  <jv-pai-component ></jv-pai-component>
+
+</form>

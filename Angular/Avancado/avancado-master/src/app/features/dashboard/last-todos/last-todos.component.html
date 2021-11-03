@@ -1,0 +1,14 @@
+<a [routerLink]="['./list']">Ver lista completa</a>
+
+<label>Mostrando os últimos 10 todos</label>
+<div *ngFor="let item of list" class="item-card"
+     (click)="markAsDone(item.id)">
+  <label>{{ item.createdAt | date:'dd/MM/yyyy HH:mm' }}</label>
+
+  <h3 [class.done]="item.done">{{ item.title }}</h3>
+
+  <div class="checkbox">
+    <input type="checkbox" [checked]="item.done">
+    <label for="checkbox"><span>Feito</span></label>
+  </div>
+</div>

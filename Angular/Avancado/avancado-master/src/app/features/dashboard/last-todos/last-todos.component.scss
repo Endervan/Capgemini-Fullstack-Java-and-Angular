@@ -1,0 +1,35 @@
+@import "src/assets/variables";
+
+:host {
+  display: flex;
+  flex-direction: column;
+
+  > a {
+    margin-bottom: $d-space;
+    color: $accent;
+  }
+
+  > label {
+    margin-bottom: $space;
+  }
+
+  > .item-card {
+    margin-bottom: $space;
+    padding: $space;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
+    border: 3px solid transparent;
+    cursor: pointer;
+
+    &:hover {
+      border: 3px solid $primary;
+    }
+
+    > h3 {
+      margin: 0;
+
+      &.done {
+        color: $text-secondary;
+      }
+    }
+  }
+}
